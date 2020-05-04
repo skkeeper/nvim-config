@@ -5,6 +5,7 @@ set shiftwidth=2
 set expandtab
 set colorcolumn=80
 set incsearch
+set number
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
@@ -25,6 +26,9 @@ Plug 'airblade/vim-gitgutter'
 " language features
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'HerringtonDarkholme/yats.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+
 
 Plug 'jremmen/vim-ripgrep' "install ripgrep
 Plug 'tpope/vim-fugitive'
@@ -39,7 +43,7 @@ Plug 'liuchengxu/space-vim-dark'
 
 call plug#end()
 
-colorscheme space-vim-dark
+colorscheme gruvbox
 set background=dark
 
 
@@ -47,10 +51,36 @@ set background=dark
 let g:NERDTreeIgnore = ['^node_modules$']
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
-nmap <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeGitStatusWithFlags = 1
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:DevIconsEnableFoldersOpenClose = 1
+
+" Check if NERDTree is open or active
+function! IsNERDTreeOpen()
+  return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
+endfunction
+
+" Call NERDTreeFind iff NERDTree is active, current window contains a modifiable
+" file, and we're not in vimdiff
+function! SyncTree()
+  if &modifiable && IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
+    NERDTreeFind
+    wincmd p
+  endif
+endfunction
+
+" Highlight currently open buffer in NERDTree
+autocmd BufEnter * call SyncTree()
+
+function! ToggleNerdTree()
+  set eventignore=BufEnter
+  NERDTreeToggle
+  set eventignore=
+endfunction
+nmap <C-n> :call ToggleNerdTree()<CR>
+
+
+
 
 "ctrlp
 
@@ -123,6 +153,8 @@ endfunction
 
 " Remap for rename current word
 nmap <F2> <Plug>(coc-rename)
+
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
 "  Remap for format selected region
 xmap <"leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)"
