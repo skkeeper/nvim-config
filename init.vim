@@ -92,8 +92,6 @@ endfunction
 nmap <C-n> :call ToggleNerdTree()<CR>
 
 
-
-
 " ============================================================================
 " === ctrlp                                                                ===
 " ============================================================================
@@ -116,7 +114,7 @@ nnoremap <Leader>ps :Rg<SPACE>
 let g:airline_powerline_fonts = 1 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='base16'
-let g:airline#extensions#hunks#enabled=0
+let g:airline#extensions#hunks#enabled=1
 
 
 " ============================================================================
@@ -131,6 +129,7 @@ let g:coc_global_extensions = [
    \ 'coc-eslint', 
    \ 'coc-prettier', 
    \ 'coc-json', 
+   \ 'coc-git'
    \ ]
 
 " always show signcolumns
