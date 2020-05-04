@@ -1,3 +1,4 @@
+set hidden
 set smarttab
 set cindent
 set tabstop=2
@@ -10,6 +11,9 @@ set number
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
 
+" ============================================================================
+" === VimPlug                                                              ===
+" ============================================================================
 call plug#begin('~/.vim/plugged')
 
 " nerdtree
@@ -22,6 +26,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'ObserverOfTime/coloresque.vim'
 
 " language features
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -46,8 +51,15 @@ call plug#end()
 colorscheme gruvbox
 set background=dark
 
+" buffer mappings
+nnoremap <leader>j :bnext<CR>
+nnoremap <leader>k :bprevious<CR>
+nnoremap <leader>x :bdelete<CR>
 
-"NERDTree
+
+" ============================================================================
+" === NERDTree                                                             ===
+" ============================================================================
 let g:NERDTreeIgnore = ['^node_modules$']
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
@@ -82,22 +94,33 @@ nmap <C-n> :call ToggleNerdTree()<CR>
 
 
 
-"ctrlp
-
+" ============================================================================
+" === ctrlp                                                                ===
+" ============================================================================
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+nnoremap <Leader><Tab> :CtrlPBuffer<CR>
 
-" ripgrep
+
+" ============================================================================
+" === ripgrep                                                              ===
+" ============================================================================
 if executable('rg')
     let g:rg_derive_root='true'
 endif
 nnoremap <Leader>ps :Rg<SPACE>
 
-"airline
+
+" ============================================================================
+" === airline                                                              ===
+" ============================================================================
 let g:airline_powerline_fonts = 1 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='base16'
 
-"coc
+
+" ============================================================================
+" === coc                                                                  ===
+" ============================================================================
 
 " coc config
 let g:coc_global_extensions = [
@@ -155,9 +178,7 @@ endfunction
 nmap <F2> <Plug>(coc-rename)
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
-"  Remap for format selected region
-xmap <"leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)"
+nnoremap <leader>f :Prettier<CR>
 
 " Add status line support, for integration with other plugin, checkout `:h coc-status`
 "set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
