@@ -1,4 +1,5 @@
 set hidden
+set nowrap
 set smarttab
 set cindent
 set tabstop=2
