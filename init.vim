@@ -8,6 +8,10 @@ set expandtab
 set colorcolumn=80
 set incsearch
 set number
+syntax enable
+if (has("termguicolors"))
+  set termguicolors
+endif
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
@@ -28,14 +32,16 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'ObserverOfTime/coloresque.vim'
+"Plug 'ObserverOfTime/coloresque.vim'
 Plug 'majutsushi/tagbar'
+Plug 'rbgrouleff/bclose.vim'
 
 " language features
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'elzr/vim-json'
 
 
 Plug 'jremmen/vim-ripgrep' "install ripgrep
@@ -48,17 +54,20 @@ Plug 'vim-airline/vim-airline-themes'
 " theme
 Plug 'morhetz/gruvbox'
 Plug 'liuchengxu/space-vim-dark'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'jaredgorski/spacecamp'
+Plug 'joshdick/onedark.vim'
+
 
 call plug#end()
 
-colorscheme gruvbox
-set background=dark
+colorscheme dracula
 
 " buffer mappings
 nnoremap <leader>j :bnext<CR>
 nnoremap <leader>k :bprevious<CR>
-nnoremap <leader>x :bdelete<CR>
-
+let g:bclose_no_plugin_maps = 1
+nnoremap <leader>x :Bclose<CR>
 
 " ============================================================================
 " === NERDTree                                                             ===
@@ -101,7 +110,7 @@ nnoremap <Leader>ps :Rg<SPACE>
 " ============================================================================
 let g:airline_powerline_fonts = 1 
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='base16'
+let g:airline_theme='onedark'
 let g:airline#extensions#hunks#non_zero_only = 1
 
 
@@ -117,7 +126,8 @@ let g:coc_global_extensions = [
    \ 'coc-eslint', 
    \ 'coc-prettier', 
    \ 'coc-json', 
-   \ 'coc-git'
+   \ 'coc-git',
+   \ 'coc-highlight'
    \ ]
 
 " always show signcolumns
