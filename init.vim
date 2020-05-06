@@ -1,24 +1,9 @@
-set hidden
-set nowrap
-set smarttab
-set cindent
-set tabstop=2
-set shiftwidth=2
-set expandtab
-set colorcolumn=80
-set incsearch
-set number
-syntax enable
-if (has("termguicolors"))
-  set termguicolors
-endif
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
 
-" ============================================================================
-" === VimPlug                                                              ===
-" ============================================================================
+" VimPlug {{{
+
 call plug#begin('~/.vim/plugged')
 
 " nerdtree
@@ -61,7 +46,9 @@ Plug 'joshdick/onedark.vim'
 
 call plug#end()
 
-colorscheme dracula
+" }}}
+
+
 
 " buffer mappings
 nnoremap <leader>j :bnext<CR>
@@ -69,9 +56,8 @@ nnoremap <leader>k :bprevious<CR>
 let g:bclose_no_plugin_maps = 1
 nnoremap <leader>x :Bclose<CR>
 
-" ============================================================================
-" === NERDTree                                                             ===
-" ============================================================================
+" NERDTree {{{
+
 let g:NERDTreeIgnore = ['^node_modules$']
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
@@ -82,41 +68,32 @@ let g:nerdtree_sync_cursorline = 1
 let g:NERDTreeGitStatusNodeColorization = 1
 
 nmap <C-n> :NERDTreeToggle<CR>
+" }}}
 
-
-" ============================================================================
-" === Tagbar                                                               ===
-" ============================================================================
+" Tagbar {{{
 nmap <F8> :TagbarToggle<CR>
+" }}}
 
-" ============================================================================
-" === ctrlp                                                                ===
-" ============================================================================
+" ctrlp {{{
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 nnoremap <Leader><Tab> :CtrlPBuffer<CR>
+" }}}
 
-
-" ============================================================================
-" === ripgrep                                                              ===
-" ============================================================================
+" ripgrep {{{
 if executable('rg')
     let g:rg_derive_root='true'
 endif
 nnoremap <Leader>ps :Rg<SPACE>
+" }}}
 
-
-" ============================================================================
-" === airline                                                              ===
-" ============================================================================
+" airline {{{
 let g:airline_powerline_fonts = 1 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='onedark'
 let g:airline#extensions#hunks#non_zero_only = 1
+" }}}
 
-
-" ============================================================================
-" === coc                                                                  ===
-" ============================================================================
+" CoC {{{
 
 " coc config
 let g:coc_global_extensions = [
@@ -188,3 +165,32 @@ nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
 nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
 " Search workspace symbols
 nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+
+" }}}
+
+" VIMRC {{{
+set hidden
+set nowrap
+set smarttab
+set cindent
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set colorcolumn=80
+set incsearch
+set number
+syntax enable
+if (has("termguicolors"))
+  set termguicolors
+endif
+
+colorscheme dracula
+
+set foldmethod=syntax
+set foldcolumn=1
+set foldlevelstart=5
+
+" }}}
+
+
+" vim:foldmethod=marker:foldlevel=0
