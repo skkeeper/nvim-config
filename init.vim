@@ -24,10 +24,11 @@ Plug 'rbgrouleff/bclose.vim'
 " language features
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
+Plug 'yuezk/vim-js'
+Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'elzr/vim-json'
-
+Plug 'alvan/vim-closetag'
+Plug 'Valloric/MatchTagAlways'
 
 Plug 'jremmen/vim-ripgrep' "install ripgrep
 Plug 'tpope/vim-fugitive'
@@ -89,8 +90,14 @@ nnoremap <Leader>ps :Rg<SPACE>
 " airline {{{
 let g:airline_powerline_fonts = 1 
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_theme='onedark'
 let g:airline#extensions#hunks#non_zero_only = 1
+let g:airline#extensions#tabline#tab_min_count = 2
+let g:airline#extensions#tabline#buffer_min_count = 2
+let g:airline#extensions#tabline#show_tab_type = 0
+let airline#extensions#coc#error_symbol = '💩:'
+let airline#extensions#coc#warning_symbol = '🚧:'
 " }}}
 
 " CoC {{{
@@ -188,9 +195,27 @@ colorscheme dracula
 
 set foldmethod=syntax
 set foldcolumn=1
-set foldlevelstart=5
+set foldlevelstart=9
 
 " }}}
 
+" vim-jsx-pretty {{{
+let g:vim_jsx_pretty_highlight_close_tag = 0
+let g:vim_jsx_pretty_colorful_config = 1
+" }}}
+
+" vim-closetag {{{
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.js,*.jsx"
+" }}}
+
+" MatchTagAlways {{{
+let g:mta_filetypes = {
+    \ 'html' : 1,
+    \ 'xhtml' : 1,
+    \ 'xml' : 1,
+    \ 'jinja' : 1,
+    \ 'javascriptreact': 1
+    \}
+" }}}
 
 " vim:foldmethod=marker:foldlevel=0
