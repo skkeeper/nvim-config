@@ -2,10 +2,10 @@
 call plug#begin('~/.vim/plugged')
 
 " nerdtree
-Plug 'scrooloose/nerdtree'
-Plug 'cage1618/vim-nerdtree-sync'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+"Plug 'scrooloose/nerdtree'
+"Plug 'cage1618/vim-nerdtree-sync'
+"Plug 'Xuyuanp/nerdtree-git-plugin'
+"Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
 
 " misc
@@ -18,7 +18,8 @@ Plug 'jremmen/vim-ripgrep' "install ripgrep
 
 " git
 Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
+Plug 'mhinz/vim-signify'
+Plug 'junegunn/gv.vim'
 
 " language features
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -47,16 +48,16 @@ call plug#end()
 
 " NERDTree {{{
 
-let g:NERDTreeIgnore = ['^node_modules$']
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
-let g:NERDTreeGitStatusWithFlags = 1
-let g:WebDevIconsUnicodeDecorateFolderNodes = 1
-let g:DevIconsEnableFoldersOpenClose = 1
-let g:nerdtree_sync_cursorline = 1
-let g:NERDTreeGitStatusNodeColorization = 1
+"let g:NERDTreeIgnore = ['^node_modules$']
+"let NERDTreeMinimalUI = 1
+"let NERDTreeDirArrows = 1
+"let g:NERDTreeGitStatusWithFlags = 1
+"let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+"let g:DevIconsEnableFoldersOpenClose = 1
+"let g:nerdtree_sync_cursorline = 1
+"let g:NERDTreeGitStatusNodeColorization = 1
 
-nmap <C-n> :NERDTreeToggle<CR>
+"nmap <C-n> :NERDTreeToggle<CR>
 " }}}
 
 " Tagbar {{{
@@ -96,7 +97,8 @@ let g:coc_global_extensions = [
    \ 'coc-prettier', 
    \ 'coc-json', 
    \ 'coc-git',
-   \ 'coc-highlight'
+   \ 'coc-highlight',
+   \ 'coc-explorer'
    \ ]
 
 source <sfile>:h/coc-settings.vim

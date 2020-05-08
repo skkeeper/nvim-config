@@ -138,3 +138,12 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+" Prettier
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+nnoremap <leader>f :Prettier<CR>
+
+" Explorer
+nmap <space>e :CocCommand explorer<CR>
+nmap <C-n> :CocCommand explorer<CR>
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
