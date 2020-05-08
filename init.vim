@@ -15,6 +15,8 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'majutsushi/tagbar'
 Plug 'jremmen/vim-ripgrep' "install ripgrep
+Plug 'justinmk/vim-sneak'
+Plug 'unblevable/quick-scope'
 
 " git
 Plug 'tpope/vim-fugitive'
@@ -98,7 +100,8 @@ let g:coc_global_extensions = [
    \ 'coc-json', 
    \ 'coc-git',
    \ 'coc-highlight',
-   \ 'coc-explorer'
+   \ 'coc-explorer',
+   \ 'coc-vimlsp'
    \ ]
 
 source <sfile>:h/coc-settings.vim
@@ -124,15 +127,58 @@ let g:mta_filetypes = {
     \}
 " }}}
 
+" Sneak {{{
+let g:sneak#label = 1
+
+" 2-character Sneak (default)
+nmap <leader>s <Plug>Sneak_s
+nmap <leader>S <Plug>Sneak_S
+" visual-mode
+xmap <leader>s <Plug>Sneak_s
+xmap <leader>S <Plug>Sneak_S
+" operator-pending-mode
+omap <leader>s <Plug>Sneak_s
+omap <leader>S <Plug>Sneak_S
+
+
+
+" case insensitive sneak
+let g:sneak#use_ic_scs = 1
+
+" imediately move tot the next instance of search, if you move the cursor sneak is back to default behavior
+let g:sneak#s_next = 1
+
+" Change the colors
+"highlight Sneak guifg=black guibg=#00C7DF ctermfg=black ctermbg=cyan
+"highlight SneakScope guifg=red guibg=yellow ctermfg=red ctermbg=yellow
+
+" Cool prompts
+let g:sneak#prompt = '🔍 '
+let g:sneak#prompt = '🕵️ '
+
+" }}}
+
+" quickscope {{{
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+
+augroup qs_colors
+  autocmd!
+  autocmd ColorScheme * highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
+  autocmd ColorScheme * highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
+augroup END
+" }}}
+
 " VIMRC {{{
 set cindent
 set colorcolumn=80
+set clipboard=unnamedplus
 set expandtab
 set foldmethod=syntax
 set foldcolumn=1
 set foldlevelstart=9
 set hidden
 set incsearch
+set mouse=a
 set nowrap
 set number
 set path+=**
