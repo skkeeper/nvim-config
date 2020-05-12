@@ -1,6 +1,5 @@
-nnoremap <Leader><Tab> :CtrlPBuffer<CR>
-
-nnoremap <Leader>ps :Rg<SPACE>
+nnoremap <C-p> :Files<CR>
+nnoremap <Leader>ps :RG<CR>
 
 " move lines
 nnoremap <A-j> :m .+1<CR>==
@@ -24,3 +23,8 @@ omap <leader>S <Plug>Sneak_S
 nnoremap <leader>j :bnext<CR>
 nnoremap <leader>k :bprevious<CR>
 nnoremap <leader>x :Bclose<CR>
+
+nnoremap <silent> <leader>      :<c-u>WhichKey '<Bslash>'<CR>
+nnoremap <silent> <localleader> :<c-u>WhichKey  '<Space>'<CR>
+
+nmap <leader>c <Plug>NERDCommenterToggle
