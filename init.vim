@@ -87,6 +87,7 @@ let g:airline#extensions#hunks#non_zero_only = 1
 let g:airline#extensions#tabline#tab_min_count = 2
 let g:airline#extensions#tabline#buffer_min_count = 2
 let g:airline#extensions#tabline#show_tab_type = 0
+let g:airline#extensions#branch#displayed_head_limit = 32
 " }}}
 
 " CoC {{{
@@ -177,12 +178,14 @@ set foldmethod=syntax
 set foldcolumn=1
 set foldlevelstart=9
 set hidden
+set ignorecase
 set incsearch
 set mouse=a
 set nowrap
 set number
 set path+=**
 set shiftwidth=2
+set smartcase
 set smarttab
 set tabstop=2
 set wildignore+=**/node_modules/**
