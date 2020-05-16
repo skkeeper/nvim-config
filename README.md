@@ -2,7 +2,7 @@
 
 ## Install
 
-- Clone to ~/.local/nvim
+- Clone to ~/.config/nvim
 
 - Install vim-plug
 
