@@ -26,6 +26,7 @@ Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'elzr/vim-json'
 Plug 'alvan/vim-closetag'
 Plug 'Valloric/MatchTagAlways'
+Plug 'andreshazard/vim-freemarker'
 
 " airline
 Plug 'vim-airline/vim-airline'
