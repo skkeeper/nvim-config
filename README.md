@@ -16,6 +16,12 @@ Windows
 git clone https://github.com/skkeeper/nvim-config.git %APPDATA%/../Local/nvim
 ```
 
+- Install nvim python 3 support
+
+```bash
+pip install neovim
+```
+
 - Install vim-plug
 
 Linux
