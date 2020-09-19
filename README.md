@@ -8,7 +8,7 @@ Linux
 
 ```bash
 git clone https://github.com/skkeeper/nvim-config.git ~/.config/nvim
-``´
+```
 
 Windows
 
