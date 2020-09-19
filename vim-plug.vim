@@ -8,6 +8,7 @@ Plug 'jremmen/vim-ripgrep' "install ripgrep
 Plug 'justinmk/vim-sneak'
 Plug 'unblevable/quick-scope'
 Plug 'liuchengxu/vim-which-key' 
+Plug 'wellle/targets.vim'
 
 " FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
