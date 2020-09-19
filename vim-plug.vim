@@ -7,7 +7,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'jremmen/vim-ripgrep' "install ripgrep
 Plug 'justinmk/vim-sneak'
 Plug 'unblevable/quick-scope'
-Plug 'liuchengxu/vim-which-key'
+Plug 'liuchengxu/vim-which-key' 
 
 " FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -44,16 +44,3 @@ Plug 'joshdick/onedark.vim'
 Plug 'guns/xterm-color-table.vim'
 
 call plug#end()
-
-source <sfile>:h/airline.vim
-source <sfile>:h/bclose.vim
-source <sfile>:h/nerdcommenter.vim
-source <sfile>:h/coc.vim
-source <sfile>:h/fzf.vim
-source <sfile>:h/MatchTagAlways.vim
-source <sfile>:h/quickscope.vim
-source <sfile>:h/ripgrep.vim
-source <sfile>:h/sneak.vim
-source <sfile>:h/vim-close-tag.vim
-source <sfile>:h/vim-jsx-pretty.vim
-source <sfile>:h/vim-which-key.vim

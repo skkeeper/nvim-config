@@ -1,8 +1,8 @@
 let g:maplocalleader = "\<Space>"
 
-source <sfile>:h/plugins/init.vim
-source <sfile>:h/general/keybindings.vim
-source <sfile>:h/general/settings.vim
+runtime vim-plug.vim
+runtime! general/**.vim
+runtime! plugins/**.vim
 
 
 
