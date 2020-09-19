@@ -23,10 +23,11 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'yuezk/vim-js'
 Plug 'MaxMEllon/vim-jsx-pretty'
-Plug 'elzr/vim-json'
+Plug 'elzr/vim-json' " json syntax support
 Plug 'alvan/vim-closetag'
 Plug 'Valloric/MatchTagAlways'
-Plug 'andreshazard/vim-freemarker'
+Plug 'andreshazard/vim-freemarker' " ftl syntax support
+Plug 'cespare/vim-toml' " toml syntax support
 
 " airline
 Plug 'vim-airline/vim-airline'
@@ -38,6 +39,9 @@ Plug 'liuchengxu/space-vim-dark'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'jaredgorski/spacecamp'
 Plug 'joshdick/onedark.vim'
+
+" misc
+Plug 'guns/xterm-color-table.vim'
 
 call plug#end()
 

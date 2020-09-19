@@ -28,3 +28,6 @@ nnoremap <silent> <leader>      :<c-u>WhichKey '<Bslash>'<CR>
 nnoremap <silent> <localleader> :<c-u>WhichKey  '<Space>'<CR>
 
 nmap <leader>c <Plug>NERDCommenterToggle
+
+nnoremap ,e :e **/*<C-z><S-Tab>
+nnoremap ,f :find **/*<C-z><S-Tab>
