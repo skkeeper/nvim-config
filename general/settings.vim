@@ -16,7 +16,7 @@ set shiftwidth=2
 set smartcase
 set smarttab
 set tabstop=2
-set wildignore+=*/node_modules/*
+set wildignore+=node_modules/**,.git/**
 set wildcharm=<C-z>
 
 syntax enable

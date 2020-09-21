@@ -9,6 +9,8 @@ Plug 'justinmk/vim-sneak'
 Plug 'unblevable/quick-scope'
 Plug 'liuchengxu/vim-which-key' 
 Plug 'wellle/targets.vim'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'romainl/vim-qf'
 
 " FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
