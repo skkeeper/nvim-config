@@ -4,7 +4,7 @@ set clipboard=unnamedplus
 set expandtab
 set foldmethod=syntax
 set foldcolumn=1
-set foldlevelstart=9
+set foldlevelstart=20
 set hidden
 set ignorecase
 set incsearch

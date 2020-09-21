@@ -14,5 +14,6 @@
     "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit"
   },
-  "explorer.icon.enableVimDevicons": true
+  "explorer.icon.enableVimDevicons": true,
+  "tsserver.implicitProjectConfig.checkJs": true
 }
