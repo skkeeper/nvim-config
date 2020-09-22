@@ -19,9 +19,15 @@ set tabstop=2
 set wildignore+=node_modules/**,.git/**
 set wildcharm=<C-z>
 
+set title "set window title
+set noshowmode "hide mode because airline already shows it
+
 syntax enable
 if (has("termguicolors"))
   set termguicolors
 endif
 
-colorscheme dracula
+try
+    colorscheme dracula
+catch
+endtry

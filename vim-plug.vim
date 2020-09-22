@@ -1,9 +1,10 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'ryanoasis/vim-devicons'
-Plug 'rbgrouleff/bclose.vim'
+"Plug 'rbgrouleff/bclose.vim'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'scrooloose/nerdcommenter'
+"Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-commentary'
 Plug 'jremmen/vim-ripgrep' "install ripgrep
 Plug 'justinmk/vim-sneak'
 Plug 'unblevable/quick-scope'
@@ -15,6 +16,7 @@ Plug 'romainl/vim-qf'
 " FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'stsewd/fzf-checkout.vim'
 
 " git
 Plug 'tpope/vim-fugitive'
@@ -23,6 +25,7 @@ Plug 'junegunn/gv.vim'
 
 " language features
 Plug 'sheerun/vim-polyglot'
+Plug 'OmniSharp/omnisharp-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'alvan/vim-closetag'
 Plug 'Valloric/MatchTagAlways'
