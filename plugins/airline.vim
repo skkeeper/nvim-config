@@ -12,6 +12,7 @@ if !exists('g:airline_symbols')
 endif
 let g:airline_symbols.linenr = ' '
 
+let g:airline_detect_spell=0
 let g:airline#extensions#coc#enabled = 0
 let g:airline_section_z = airline#section#create(['linenr', ':%v'])
 " remove separators for empty sections

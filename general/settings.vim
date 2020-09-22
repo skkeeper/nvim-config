@@ -15,6 +15,9 @@ set path-=/usr/include
 set shiftwidth=2
 set smartcase
 set smarttab
+set spell
+" set spellfile=spell/pt-preao.utf-8.add
+set spelllang=en_us
 set tabstop=2
 set wildignore+=node_modules/**,.git/**
 set wildcharm=<C-z>
