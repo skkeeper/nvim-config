@@ -24,9 +24,11 @@ xmap <leader>S <Plug>Sneak_S
 omap <leader>s <Plug>Sneak_s
 omap <leader>S <Plug>Sneak_S
 
+" Buffers
 nnoremap <leader>j :bnext<CR>
 nnoremap <leader>k :bprevious<CR>
 nnoremap <leader>x :bdelete<CR>
+nnoremap <leader>o :Bonly<CR>
 
 nnoremap <silent> <leader>      :<c-u>WhichKey '<Bslash>'<CR>
 nnoremap <silent> <localleader> :<c-u>WhichKey  '<Space>'<CR>

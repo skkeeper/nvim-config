@@ -8,6 +8,7 @@ let g:which_key_map =  {}
 let g:which_key_map.j = "Buffer: Next"
 let g:which_key_map.k = "Buffer: Previous"
 let g:which_key_map.x = "Buffer: Close"
+let g:which_key_map.o = "Buffer: Close others"
 let g:which_key_map.g = { 'name': 'Git' }
 let g:which_key_map.g.s = "Status"
 let g:which_key_map.g.d = "Diff List"

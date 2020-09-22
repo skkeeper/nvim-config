@@ -12,6 +12,7 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'wellle/targets.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'romainl/vim-qf'
+Plug 'vim-scripts/BufOnly.vim'
 
 " FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
