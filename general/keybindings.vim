@@ -35,8 +35,8 @@ nnoremap <silent> <localleader> :<c-u>WhichKey  '<Space>'<CR>
 
 nnoremap ,e :e **/*<C-z><S-Tab>
 nnoremap ,f :find **/*<C-z><S-Tab>
-nnoremap ,b :b <C-z><S-Tab>
-nnoremap ,t :tag <C-z><S-Tab>
+nnoremap ,b :Buffers<CR>
+nnoremap ,t :Tags<CR>
 
 " netrw
 nnoremap <leader>e :Explore<CR>
