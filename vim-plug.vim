@@ -14,6 +14,9 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'romainl/vim-qf'
 Plug 'vim-scripts/BufOnly.vim'
 
+" tmux
+Plug 'tmux-plugins/vim-tmux-focus-events'
+
 " FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
