@@ -45,8 +45,10 @@ Plug 'liuchengxu/space-vim-dark'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'jaredgorski/spacecamp'
 Plug 'joshdick/onedark.vim'
+Plug 'ayu-theme/ayu-vim'
 
 " misc
+Plug 'Yggdroot/indentLine'
 Plug 'guns/xterm-color-table.vim'
 
 call plug#end()

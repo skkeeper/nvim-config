@@ -4,7 +4,8 @@
     "markdown",
     "javascriptreact",
     "html",
-    "javascript"
+    "javascript",
+    "java"
   ],
 
   "explorer.width": 30,
@@ -15,5 +16,7 @@
     "v": "open:vsplit"
   },
   "explorer.icon.enableVimDevicons": true,
-  "tsserver.implicitProjectConfig.checkJs": true
+  "prettier.formatterPriority": -1,
+  "tsserver.implicitProjectConfig.checkJs": true,
+  "java.format.enabled": true,
 }

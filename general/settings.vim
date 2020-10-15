@@ -31,6 +31,9 @@ if (has("termguicolors"))
 endif
 
 try
-    colorscheme dracula
+  let ayucolor="dark" 
+  colorscheme ayu
 catch
 endtry
+
+
