@@ -19,7 +19,7 @@ set spell
 " set spellfile=spell/pt-preao.utf-8.add
 set spelllang=en_us
 set tabstop=2
-set wildignore+=node_modules/**,.git/**
+set wildignore+=node_modules/**,.git/**,.settings/**,.mvn/**
 set wildcharm=<C-z>
 
 set title "set window title
