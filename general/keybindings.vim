@@ -30,6 +30,12 @@ nnoremap <leader>k :bprevious<CR>
 nnoremap <leader>x :bdelete<CR>
 nnoremap <leader>o :Bonly<CR>
 
+" Quickfix
+nnoremap <leader>cf :cfirst<CR>
+nnoremap <leader>cl :clast<CR>
+nnoremap <leader>cn :cnext<CR>
+nnoremap <leader>cp :cprevious<CR>
+
 nnoremap <silent> <leader>      :<c-u>WhichKey '<Bslash>'<CR>
 nnoremap <silent> <localleader> :<c-u>WhichKey  '<Space>'<CR>
 

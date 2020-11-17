@@ -23,6 +23,12 @@ let g:which_key_map.g.l = "Log"
 let g:which_key_map.g.b = "Branches"
 let g:which_key_map.g.t = "Tags"
 
+let g:which_key_map.c = { 'name': 'quickfix' }
+let g:which_key_map.c.f = "First"
+let g:which_key_map.c.l = "Last"
+let g:which_key_map.c.n = "Next"
+let g:which_key_map.c.p = "Previous"
+
 let g:which_key_map.e = "Explore current directory"
 
 let g:which_key_map.p = {'name': 'which_key_ignore'}
