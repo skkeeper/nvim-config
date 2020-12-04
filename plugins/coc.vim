@@ -161,3 +161,7 @@ nnoremap <leader>f :Prettier<CR>
 nmap <space>e :CocCommand explorer<CR>
 nmap <C-n> :CocCommand explorer<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+
+
+autocmd BufWritePre *.js CocCommand prettier.formatFile
+autocmd BufWritePre *.jsx CocCommand prettier.formatFile

@@ -2,12 +2,9 @@
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
     "markdown",
-    "javascriptreact",
     "html",
-    "javascript",
     "java"
   ],
-
   "explorer.width": 30,
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": false,
@@ -16,7 +13,8 @@
     "v": "open:vsplit"
   },
   "explorer.icon.enableVimDevicons": true,
-  "prettier.formatterPriority": -1,
+  "prettier.formatterPriority": 1,
   "tsserver.implicitProjectConfig.checkJs": true,
   "java.format.enabled": true,
+  "javascript.format.enabled": false
 }
