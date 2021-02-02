@@ -2,8 +2,8 @@ let g:mapleader = "\\"
 let g:maplocalleader = ' '
 
 
-nnoremap <C-p> :Files<CR>
-nnoremap <Leader>ps :RG<CR>
+"nnoremap <C-p> :Files<CR>
+"nnoremap <Leader>ps :RG<CR>
 
 " move lines
 nnoremap <A-j> :m .+1<CR>==
@@ -41,8 +41,8 @@ nnoremap <silent> <localleader> :<c-u>WhichKey  '<Space>'<CR>
 
 nnoremap ,e :e **/*<C-z><S-Tab>
 nnoremap ,f :find **/*<C-z><S-Tab>
-nnoremap ,b :Buffers<CR>
-nnoremap ,t :Tags<CR>
+"nnoremap ,b :Buffers<CR>
+"nnoremap ,t :Tags<CR>
 
 " netrw
 nnoremap <leader>e :Explore<CR>
@@ -60,3 +60,12 @@ nmap <leader>gp :Gpull<CR>
 nmap <leader>gl :Glog<CR>
 nmap <leader>gb :GBranches<CR>
 nmap <leader>gt :GTags<CR>
+
+" Telescope
+" Find files using Telescope command-line sugar.
+nnoremap <C-p> <cmd>Telescope find_files<cr>
+nnoremap <leader>ps <cmd>Telescope live_grep<cr>
+nnoremap ,b <cmd>Telescope buffers<cr>
+nnoremap ,t <cmd>Telescope tags<cr>
+
+nnoremap <Leader>pp :lua require'telescope.builtin'.planets{}

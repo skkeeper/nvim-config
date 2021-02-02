@@ -17,6 +17,10 @@ Plug 'vim-scripts/BufOnly.vim'
 " tmux
 Plug 'tmux-plugins/vim-tmux-focus-events'
 
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
 " FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
