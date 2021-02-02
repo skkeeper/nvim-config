@@ -50,5 +50,6 @@ Plug 'ayu-theme/ayu-vim'
 " misc
 Plug 'Yggdroot/indentLine'
 Plug 'guns/xterm-color-table.vim'
+Plug 'dbeniamine/cheat.sh-vim'
 
 call plug#end()
