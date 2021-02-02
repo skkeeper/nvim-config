@@ -2,6 +2,7 @@ set cindent
 set colorcolumn=80
 set clipboard=unnamedplus
 set expandtab
+set exrc
 set foldmethod=syntax
 set foldcolumn=1
 set foldlevelstart=20
@@ -12,12 +13,14 @@ set mouse=a
 set nowrap
 set number
 set path-=/usr/include
+set signcolumn=yes
 set shiftwidth=2
 set smartcase
 set smarttab
 set spell
 " set spellfile=spell/pt-preao.utf-8.add
 set spelllang=en_us
+set scrolloff=8
 set tabstop=2
 set wildignore+=node_modules/**,.git/**,.settings/**,.mvn/**
 set wildcharm=<C-z>
