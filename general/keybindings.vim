@@ -63,7 +63,7 @@ nmap <leader>gt :GTags<CR>
 
 " Telescope
 " Find files using Telescope command-line sugar.
-nnoremap <C-p> <cmd>Telescope find_files<cr>
+nnoremap <C-p> <cmd>Telescope find_files find_command=rg,--ignore,--hidden,--files prompt_prefix=🔍<cr>
 nnoremap <leader>ps <cmd>Telescope live_grep<cr>
 nnoremap ,b <cmd>Telescope buffers<cr>
 nnoremap ,t <cmd>Telescope tags<cr>
