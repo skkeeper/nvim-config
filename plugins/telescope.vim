@@ -6,6 +6,7 @@ nnoremap ,b <cmd>Telescope buffers<cr>
 nnoremap ,t <cmd>Telescope tags<cr>
 nnoremap ,q :lua require'telescope.builtin'.quickfix{}<cr>
 nnoremap ,c :lua require'telescope.builtin'.command_history{}<cr>
+nnoremap <leader>ds :lua require('skkeeper.telescope').search_dotfiles()<CR>
 nnoremap <leader>pc :lua require'telescope.builtin'.git_commits{}<cr>
 nnoremap <leader>pf :lua require'telescope.builtin'.git_bcommits{}<cr>
 nnoremap <leader>pb :lua require'telescope.builtin'.git_branches{}<cr>
