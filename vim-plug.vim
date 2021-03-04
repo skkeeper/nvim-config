@@ -35,10 +35,13 @@ Plug 'junegunn/gv.vim'
 " language features
 Plug 'sheerun/vim-polyglot'
 Plug 'OmniSharp/omnisharp-vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
 Plug 'alvan/vim-closetag'
 Plug 'Valloric/MatchTagAlways'
 Plug 'andreshazard/vim-freemarker' " ftl syntax support
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 
 " airline
 Plug 'vim-airline/vim-airline'
