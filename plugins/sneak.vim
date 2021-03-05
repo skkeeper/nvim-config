@@ -1,9 +1,5 @@
 let g:sneak#label = 1
 
-
-
-
-
 " case insensitive sneak
 let g:sneak#use_ic_scs = 1
 
@@ -16,4 +12,15 @@ let g:sneak#s_next = 1
 
 " Cool prompts
 let g:sneak#prompt = '🔍 '
-let g:sneak#prompt = '🕵️ '
+"let g:sneak#prompt = '🕵️ '
+
+" 2-character Sneak (default)
+nmap <leader>s <Plug>Sneak_s
+nmap <leader>S <Plug>Sneak_S
+" visual-mode
+xmap <leader>s <Plug>Sneak_s
+xmap <leader>S <Plug>Sneak_S
+" operator-pending-mode
+omap <leader>s <Plug>Sneak_s
+omap <leader>S <Plug>Sneak_S
+

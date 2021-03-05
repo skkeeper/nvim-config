@@ -1,9 +1,8 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'ryanoasis/vim-devicons'
-"Plug 'rbgrouleff/bclose.vim'
+Plug 'rbgrouleff/bclose.vim'
 Plug 'editorconfig/editorconfig-vim'
-"Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-commentary'
 Plug 'jremmen/vim-ripgrep' "install ripgrep
 Plug 'justinmk/vim-sneak'
@@ -22,10 +21,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
-" FZF
-"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-"Plug 'junegunn/fzf.vim'
-"Plug 'stsewd/fzf-checkout.vim'
+Plug 'mcchrish/nnn.vim' "install nnn
 
 " git
 Plug 'tpope/vim-fugitive'
@@ -35,13 +31,13 @@ Plug 'junegunn/gv.vim'
 " language features
 Plug 'sheerun/vim-polyglot'
 Plug 'OmniSharp/omnisharp-vim'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'alvan/vim-closetag'
 Plug 'Valloric/MatchTagAlways'
 Plug 'andreshazard/vim-freemarker' " ftl syntax support
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+Plug 'ap/vim-css-color'
 
 " airline
 Plug 'vim-airline/vim-airline'
