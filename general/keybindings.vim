@@ -12,7 +12,7 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 " Buffers
 nnoremap <leader>j :bnext<CR>
 nnoremap <leader>k :bprevious<CR>
-nnoremap <leader>x :bclose<CR>
+nnoremap <leader>x :Bclose<CR>
 nnoremap <leader>o :Bonly<CR>
 
 " Quickfix

@@ -16,6 +16,7 @@ Plug 'vim-scripts/BufOnly.vim'
 " tmux
 Plug 'tmux-plugins/vim-tmux-focus-events'
 
+" telescope
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -29,9 +30,11 @@ Plug 'mhinz/vim-signify'
 Plug 'junegunn/gv.vim'
 
 " language features
+Plug 'neovim/nvim-lspconfig'
+Plug 'onsails/lspkind-nvim'
+Plug 'kosayoda/nvim-lightbulb'
 Plug 'sheerun/vim-polyglot'
 Plug 'OmniSharp/omnisharp-vim'
-Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'alvan/vim-closetag'
 Plug 'Valloric/MatchTagAlways'
@@ -40,8 +43,13 @@ Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'ap/vim-css-color'
 
 " airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
+
+" lightline
+Plug 'itchyny/lightline.vim'
+Plug 'albertomontesg/lightline-asyncrun'
+Plug 'mengelbrecht/lightline-bufferline'
 
 " colorschemes
 Plug 'morhetz/gruvbox'
