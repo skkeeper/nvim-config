@@ -36,24 +36,15 @@ let g:which_key_map.pc = "Git commits (telescope)"
 let g:which_key_map.pf = "Buffer Git commits (telescope)"
 let g:which_key_map.ph = "Git status (telescope)"
 
-let g:which_key_map.f = "Prettier"
 
 let g:which_key_map.d = {'name': 'which_key_ignore'}
 let g:which_key_map.ds = "Search Dot Files"
 
-let g:which_key_map.v = {'name':'lsp code'}
-let g:which_key_map.v.a = "Action"
-let g:which_key_map.v.d = "Definition"
-let g:which_key_map.v.h = "Hover"
-let g:which_key_map.v.i = "Implementation"
-let g:which_key_map.v.r = "References"
-let g:which_key_map.v.s = "Signature help"
-
-let g:which_key_map.s = "Sneak"
-let g:which_key_map.S = "Sneak backwards"
 
 let g:which_localkey_map = {}
-
+let g:which_localkey_map.f = "Prettier"
+let g:which_localkey_map.s = "Sneak"
+let g:which_localkey_map.S = "Sneak backwards"
 
 " Register which key map
 call which_key#register("\<Bslash>", "g:which_key_map")
