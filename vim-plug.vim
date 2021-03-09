@@ -30,9 +30,7 @@ Plug 'mhinz/vim-signify'
 Plug 'junegunn/gv.vim'
 
 " language features
-Plug 'neovim/nvim-lspconfig'
-Plug 'onsails/lspkind-nvim'
-Plug 'kosayoda/nvim-lightbulb'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'nvim-lua/completion-nvim'
@@ -42,14 +40,11 @@ Plug 'andreshazard/vim-freemarker' " ftl syntax support
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'ap/vim-css-color'
 
-" airline
-"Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
-
 " lightline
 Plug 'itchyny/lightline.vim'
 Plug 'albertomontesg/lightline-asyncrun'
 Plug 'mengelbrecht/lightline-bufferline'
+Plug 'josa42/vim-lightline-coc'
 
 " colorschemes
 Plug 'morhetz/gruvbox'
@@ -58,6 +53,7 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'jaredgorski/spacecamp'
 Plug 'joshdick/onedark.vim'
 Plug 'ayu-theme/ayu-vim'
+Plug 'colepeters/spacemacs-theme.vim'
 
 " misc
 Plug 'Yggdroot/indentLine'
