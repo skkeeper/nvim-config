@@ -37,5 +37,5 @@ try
   colorscheme dracula
 catch
 endtry
-
+hi Normal guibg=NONE ctermbg=NONE
 
