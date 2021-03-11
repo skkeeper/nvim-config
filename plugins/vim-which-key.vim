@@ -42,9 +42,25 @@ let g:which_key_map.ds = "Search Dot Files"
 
 
 let g:which_localkey_map = {}
-let g:which_localkey_map.f = "Prettier"
+let g:which_localkey_map.f = "Format"
 let g:which_localkey_map.s = "Sneak"
 let g:which_localkey_map.S = "Sneak backwards"
+let g:which_localkey_map['#'] = "Symbols"
+let g:which_localkey_map.a = "Code action selection"
+let g:which_localkey_map.ac = "Code action"
+let g:which_localkey_map.acp = "Code action on paragraph"
+let g:which_localkey_map.b = "Git blame"
+let g:which_localkey_map.d = "Git diff split"
+let g:which_localkey_map.g = "CoC diagnostics"
+let g:which_localkey_map.o = "Outline"
+let g:which_localkey_map.c = {'name': 'Location list'}
+let g:which_localkey_map.c.c = "Close"
+let g:which_localkey_map.c.f = "First"
+let g:which_localkey_map.c.l = "Last"
+let g:which_localkey_map.c.n = "Next"
+let g:which_localkey_map.c.o = "Open"
+let g:which_localkey_map.c.p = "Previous"
+
 
 " Register which key map
 call which_key#register("\<Bslash>", "g:which_key_map")

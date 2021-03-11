@@ -152,7 +152,7 @@ xmap <silent> <C-s> <Plug>(coc-range-select)
 
 " Mappings for CoCList
 " Show all diagnostics.
-nnoremap <silent><nowait> <localleader>a :<C-u>CocList diagnostics<cr>
+nnoremap <silent><nowait> <localleader>g :<C-u>CocList diagnostics<cr>
 " Find symbol of current document.
 nnoremap <silent><nowait> <localleader>o :<C-u>CocList outline<cr>
 " Search workspace symbols.
