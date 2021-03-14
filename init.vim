@@ -1,7 +1,12 @@
+if has("nvim")
+   lua require('skkeeper/plugins')
+endif
 
-runtime vim-plug.vim
 runtime! general/**.vim
-runtime! plugins/**.vim
+
+if has("nvim")
+   runtime! plugins/**.vim
+endif
 
 
 
