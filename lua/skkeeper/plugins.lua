@@ -9,11 +9,10 @@ if fn.empty(fn.glob(install_path)) > 0 then
    execute 'packadd packer.nvim'
 end
 
--- Config
+-- Packer config
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function()
--- Packer can manage itself as an optional plugin
 use {'wbthomason/packer.nvim', opt = true}
 
 use 'ryanoasis/vim-devicons'
@@ -45,13 +44,14 @@ use 'junegunn/gv.vim'
 
 -- language features
 use {'neoclide/coc.nvim', branch='release'}
---use 'sheerun/vim-polyglot'
-use 'OmniSharp/omnisharp-vim'
+use 'sheerun/vim-polyglot'
 use 'alvan/vim-closetag'
 use 'Valloric/MatchTagAlways'
 use 'andreshazard/vim-freemarker' -- ftl syntax support
+-- web
 use {'prettier/vim-prettier', run= 'npm install' }
 use 'ap/vim-css-color'
+use 'vim-test/vim-test'
 
 -- lightline
 use 'itchyny/lightline.vim'
@@ -60,27 +60,12 @@ use 'mengelbrecht/lightline-bufferline'
 use 'josa42/vim-lightline-coc'
 
 -- colorschemes
-use 'morhetz/gruvbox'
-use 'liuchengxu/space-vim-dark'
 use {'dracula/vim',  as= 'dracula' }
-use 'jaredgorski/spacecamp'
-use 'joshdick/onedark.vim'
-use 'ayu-theme/ayu-vim'
-use 'colepeters/spacemacs-theme.vim'
-
--- colorschemes with treesitter
-use {'nvim-treesitter/nvim-treesitter', run=':TSUpdate'}
-use 'Th3Whit3Wolf/one-nvim'
-use 'yonlu/omni.vim'
-use 'ray-x/aurora'
-
 
 -- misc
 use 'Yggdroot/indentLine'
-use 'guns/xterm-color-table.vim'
 use 'dbeniamine/cheat.sh-vim'
 use 'vimwiki/vimwiki'
-use 'mhartington/oceanic-next'
-use 'sainnhe/sonokai'
+use 'tpope/vim-dispatch'
 
 end)
