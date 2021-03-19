@@ -15,7 +15,8 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
 use {'wbthomason/packer.nvim', opt = true}
 
-use 'ryanoasis/vim-devicons'
+-- use 'ryanoasis/vim-devicons'
+use 'kyazdani42/nvim-web-devicons'
 use 'rbgrouleff/bclose.vim'
 use 'editorconfig/editorconfig-vim'
 use 'tpope/vim-commentary'

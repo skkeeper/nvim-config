@@ -1,16 +1,18 @@
 let g:coc_global_extensions = [
-   \ 'coc-snippets',
    \ 'coc-pairs',
    \ 'coc-tsserver',
    \ 'coc-eslint', 
    \ 'coc-prettier', 
    \ 'coc-json', 
+   \ 'coc-css',
    \ 'coc-git',
    \ 'coc-highlight',
    \ 'coc-explorer',
    \ 'coc-vimlsp',
    \ 'coc-java',
-   \ 'coc-jest'
+   \ 'coc-jest',
+   \ 'coc-go',
+   \ 'coc-yaml'
    \ ]
 
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
