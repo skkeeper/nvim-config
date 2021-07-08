@@ -15,19 +15,17 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
 use {'wbthomason/packer.nvim', opt = true}
 
--- use 'ryanoasis/vim-devicons'
 use 'kyazdani42/nvim-web-devicons'
 use 'rbgrouleff/bclose.vim'
 use 'editorconfig/editorconfig-vim'
-use 'tpope/vim-commentary'
+--use 'tpope/vim-commentary'
+use 'b3nj5m1n/kommentary'
 use 'justinmk/vim-sneak'
 use 'unblevable/quick-scope'
 use 'liuchengxu/vim-which-key'
 use 'wellle/targets.vim'
 use 'romainl/vim-qf'
 use 'vim-scripts/BufOnly.vim'
-
-use 'tmux-plugins/vim-tmux-focus-events'
 
 use { 'nvim-telescope/telescope.nvim', requires = { 
   'nvim-lua/popup.nvim', 
@@ -40,8 +38,16 @@ use 'mcchrish/nnn.vim'
 
 -- git
 use 'tpope/vim-fugitive'
-use 'mhinz/vim-signify'
+use 'idanarye/vim-merginal'
+--use 'mhinz/vim-signify'
+use {
+  'lewis6991/gitsigns.nvim',
+  requires = {
+    'nvim-lua/plenary.nvim'
+  }
+}
 use 'junegunn/gv.vim'
+use 'sindrets/diffview.nvim'
 
 -- language features
 use {'neoclide/coc.nvim', branch='release'}
