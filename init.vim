@@ -1,12 +1,11 @@
-if has("nvim")
-   lua require('skkeeper/plugins')
-endif
+lua require("config/settings")
+lua require("config/netrw")
+lua require("config/plugins")
+lua require("config/keybindings")
 
 runtime! general/**.vim
+runtime! plugins/**.vim
 
-if has("nvim")
-   runtime! plugins/**.vim
-endif
 
 
 
