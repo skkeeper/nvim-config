@@ -28,7 +28,13 @@ return require('packer').startup(
   use 'b3nj5m1n/kommentary'
   use 'justinmk/vim-sneak'
   use 'unblevable/quick-scope'
-  use 'liuchengxu/vim-which-key'
+  use {
+    'AckslD/nvim-whichkey-setup.lua',
+    requires = {'liuchengxu/vim-which-key', config='require("plugin_settings.whichkey")'},
+    config = function()
+      require("config/vim-which-key").config()
+    end
+  }
   use 'wellle/targets.vim'
   use 'romainl/vim-qf'
   use 'vim-scripts/BufOnly.vim'
@@ -52,7 +58,10 @@ return require('packer').startup(
     'lewis6991/gitsigns.nvim',
     requires = {
       'nvim-lua/plenary.nvim'
-    }
+    },
+    config = function()
+      require("config/gitsigns").config()
+    end
   }
   use 'junegunn/gv.vim'
   use 'sindrets/diffview.nvim'
@@ -95,7 +104,13 @@ return require('packer').startup(
       require("config/indent-blankline")()
     end
   }
-  use 'dbeniamine/cheat.sh-vim'
+  use {
+    'dbeniamine/cheat.sh-vim',
+    config = function()
+      require('config/cheatsh-vim').config()
+    end
+
+  }
   use 'vimwiki/vimwiki'
   use 'tpope/vim-dispatch'
   use {
