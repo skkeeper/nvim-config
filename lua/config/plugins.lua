@@ -25,7 +25,6 @@ return require('packer').startup(
     end
   }
   use 'editorconfig/editorconfig-vim'
-  --use 'tpope/vim-commentary'
   use 'b3nj5m1n/kommentary'
   use 'justinmk/vim-sneak'
   use 'unblevable/quick-scope'
@@ -49,7 +48,6 @@ return require('packer').startup(
   -- git
   use 'tpope/vim-fugitive'
   use 'idanarye/vim-merginal'
-  --use 'mhinz/vim-signify'
   use {
     'lewis6991/gitsigns.nvim',
     requires = {
@@ -67,7 +65,6 @@ return require('packer').startup(
   use 'andreshazard/vim-freemarker' -- ftl syntax support
   -- web
   use {'prettier/vim-prettier', run= 'npm install' }
-  --use 'ap/vim-css-color'
   use {
     "norcalli/nvim-colorizer.lua",
      event = "BufRead",
@@ -91,7 +88,6 @@ return require('packer').startup(
   use {'dracula/vim',  as= 'dracula' }
 
   -- misc
-  --use 'Yggdroot/indentLine'
   use {
     "lukas-reineke/indent-blankline.nvim",
     event = "BufRead",
