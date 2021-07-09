@@ -1,4 +1,5 @@
 local map = require("config/utils").map
+
 local g = vim.g
 
 g.mapleader = "\\"

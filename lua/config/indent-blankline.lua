@@ -1,10 +1,16 @@
-return function()
-    vim.g.indentLine_enabled = 1
-    vim.g.indent_blankline_char = "▏"
+local g = vim.g
 
-    vim.g.indent_blankline_filetype_exclude = {"help", "terminal", "dashboard"}
-    vim.g.indent_blankline_buftype_exclude = {"terminal"}
+local M = {}
 
-    vim.g.indent_blankline_show_trailing_blankline_indent = false
-    vim.g.indent_blankline_show_first_indent_level = false
+M.config = function()
+    g.indentLine_enabled = 1
+    g.indent_blankline_char = "▏"
+
+    g.indent_blankline_filetype_exclude = {"help", "terminal", "dashboard"}
+    g.indent_blankline_buftype_exclude = {"terminal"}
+
+    g.indent_blankline_show_trailing_blankline_indent = false
+    g.indent_blankline_show_first_indent_level = false
 end
+
+return M

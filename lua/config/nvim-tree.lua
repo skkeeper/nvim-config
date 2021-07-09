@@ -1,10 +1,9 @@
 local map = require("config/utils").map
+local g = vim.g
 
 local M = {}
 
 M.config = function()
-    local g = vim.g
-
     vim.o.termguicolors = true
 
     g.nvim_tree_side = "left"
@@ -96,7 +95,7 @@ M.config = function()
     }
 end
 
-M.keybindings = function() 
+M.keybindings = function()
     map("n", "<C-n>", ":NvimTreeToggle<CR>")
 end
 
