@@ -38,19 +38,24 @@ return require('packer').startup(
     use 'wellle/targets.vim'
     use 'romainl/vim-qf'
     use 'vim-scripts/BufOnly.vim'
+    use {
+        "lukas-reineke/indent-blankline.nvim",
+        event = "BufRead",
+        config = function()
+            require("config/indent-blankline").config()
+        end
+    }
 
     use { 'nvim-telescope/telescope.nvim', 
         requires = {
-        'nvim-lua/popup.nvim',
-        'nvim-lua/plenary.nvim',
-        'nvim-telescope/telescope-fzy-native.nvim'
-    },
-    config = function()
-        require("config/telescope").config()
-    end
+            'nvim-lua/popup.nvim',
+            'nvim-lua/plenary.nvim',
+            'nvim-telescope/telescope-fzy-native.nvim'
+        },
+        config = function()
+            require("config/telescope").config()
+        end
     }
-
-    use 'mcchrish/nnn.vim'
 
     -- git
     use 'tpope/vim-fugitive'
@@ -65,7 +70,7 @@ return require('packer').startup(
         end
     }
     use 'junegunn/gv.vim'
-    use 'sindrets/diffview.nvim'
+    use {'sindrets/diffview.nvim', disable = true}
 
     -- language features
     use {'neoclide/coc.nvim', branch='release'}
@@ -95,20 +100,16 @@ return require('packer').startup(
 
     -- colorschemes
     use {'dracula/vim',  as= 'dracula' }
+    use 'sainnhe/sonokai'
 
     -- misc
-    use {
-        "lukas-reineke/indent-blankline.nvim",
-        event = "BufRead",
-        config = function()
-            require("config/indent-blankline").config()
-        end
-    }
+
     use {
         'dbeniamine/cheat.sh-vim',
         config = function()
             require('config/cheatsh-vim').config()
-        end
+        end,
+        disable = true
     }
     use 'vimwiki/vimwiki'
     use 'tpope/vim-dispatch'
@@ -119,6 +120,8 @@ return require('packer').startup(
             require("config/nvim-tree").config()
         end
     }
+    use 'bayne/vim-dot-http'
+
     end,
 {
     display = {

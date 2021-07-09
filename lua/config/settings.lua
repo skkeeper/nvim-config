@@ -46,4 +46,10 @@ vim.api.nvim_command([[
     autocmd ColorScheme * highlight Normal guibg=NONE ctermbg=NONE
 ]])
 
-cmd("colorscheme dracula")
+vim.g.sonokai_style = 'atlantis'
+cmd([[
+    try
+        colorscheme sonokai 
+    catch
+    endtry
+]])
