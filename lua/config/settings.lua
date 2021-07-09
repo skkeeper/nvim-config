@@ -44,6 +44,7 @@ end
 
 vim.api.nvim_command([[
     autocmd ColorScheme * highlight Normal guibg=NONE ctermbg=NONE
+    autocmd ColorScheme * highlight EndOfBuffer guibg=NONE ctermbg=NONE
 ]])
 
 vim.g.sonokai_style = 'atlantis'
