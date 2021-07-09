@@ -53,7 +53,7 @@ M.keybindings = function()
     map("n", "<leader>pb",[[<Cmd> Telescope git_branches<CR>]])
     map("n", "<leader>ph",[[<Cmd> Telescope git_status<CR>]])
 
-    map("n", "<leader>ds",[[<Cmd>lua require('config.telescope.config').search_dotfiles()<CR>]])
+    map("n", "<leader>ds",[[<Cmd>lua require('config.telescope').search_dotfiles()<CR>]])
 end
 
 return M
