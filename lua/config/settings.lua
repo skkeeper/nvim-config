@@ -14,11 +14,11 @@ opt.hidden = true
 opt.ignorecase = true
 opt.incsearch = true
 opt.mouse = "a"
-opt.completeopt = "menuone,noinsert,noselect"
+opt.completeopt = "menuone,noselect"
 wo.wrap = false
 opt.number = true
 opt.path = { '.' }
-opt.signcolumn="yes"
+opt.signcolumn = "yes"
 opt.shiftwidth = 2
 opt.smartcase = true
 opt.smarttab = true
@@ -31,7 +31,8 @@ opt.wildignore = {
     "node_modules/**",
     ".git/**",
     ".settings/**",
-    ".mvn/**"
+    ".mvn/**",
+    "*.pyc",
 }
 opt.wildcharm = vim.fn.char2nr('<C-z>')
 
@@ -47,8 +48,6 @@ vim.api.nvim_command([[
     autocmd ColorScheme * highlight Normal guibg=NONE ctermbg=NONE
     autocmd ColorScheme * highlight EndOfBuffer guibg=NONE ctermbg=NONE
 ]])
-
-vim.g.sonokai_style = 'atlantis'
 
 vim.g.tokyonight_style = "storm"
 vim.g.tokyonight_transparent = true

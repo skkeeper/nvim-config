@@ -12,10 +12,8 @@ end
 -- Packer config
 vim.cmd [[packadd packer.nvim]]
 
-return require('packer').startup(
-    function()
-
-    use {'wbthomason/packer.nvim', opt = true}
+return require('packer').startup(function()
+    use { 'wbthomason/packer.nvim', opt = true }
 
     use 'kyazdani42/nvim-web-devicons'
     use {
@@ -73,7 +71,6 @@ return require('packer').startup(
     use {'sindrets/diffview.nvim', disable = true}
 
     -- language features
-    -- use {'neoclide/coc.nvim', branch='release'}
     use {
         'neovim/nvim-lspconfig',
         config = function()
@@ -94,12 +91,12 @@ return require('packer').startup(
         end
     }
     use {
-        'nvim-lua/completion-nvim',
+        'hrsh7th/nvim-compe',
         config = function()
-            require('config/completion-nvim').config()
+            require('config/compe').config()        
         end
     }
-    -- use 'sheerun/vim-polyglot'
+
     use 'alvan/vim-closetag'
     use 'Valloric/MatchTagAlways'
     -- use 'andreshazard/vim-freemarker' -- ftl syntax support
@@ -118,7 +115,7 @@ return require('packer').startup(
         end
     }
     -- web
-    use {'prettier/vim-prettier', run= 'npm install' }
+    use { 'prettier/vim-prettier', run = 'npm install' }
     use {
         "norcalli/nvim-colorizer.lua",
         event = "BufRead",
@@ -137,10 +134,7 @@ return require('packer').startup(
     -- use 'josa42/vim-lightline-coc'
 
     -- colorschemes
-    --[[ use {'dracula/vim', as= 'dracula' }
-    use 'sainnhe/sonokai' ]]
     use 'folke/tokyonight.nvim'    
-
 
     -- misc
     use 'vimwiki/vimwiki'

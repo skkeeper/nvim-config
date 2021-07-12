@@ -18,8 +18,6 @@ M.config = function()
             vim.api.nvim_command [[augroup END]]
         end
 
-        require'completion'.on_attach(client, bufnr)
-
         protocol.CompletionItemKind = {
             '', -- Text
             '', -- Method
@@ -71,7 +69,18 @@ M.config = function()
 
     nvim_lsp.diagnosticls.setup {
         on_attach = on_attach,
-        filetypes = { 'javascript', 'javascriptreact', 'json', 'typescript', 'typescriptreact', 'css', 'less', 'scss', 'markdown', 'pandoc' },
+        filetypes = { 
+            'javascript', 
+            'javascriptreact', 
+            'json', 
+            'typescript', 
+            'typescriptreact', 
+            'css', 
+            'less', 
+            'scss', 
+            'markdown', 
+            'pandoc' 
+        },
         init_options = {
             linters = {
                 eslint = {
