@@ -99,11 +99,24 @@ return require('packer').startup(
     use 'josa42/vim-lightline-coc'
 
     -- colorschemes
-    use {'dracula/vim',  as= 'dracula' }
+    use {'dracula/vim', as= 'dracula' }
     use 'sainnhe/sonokai'
+    use {
+        'folke/tokyonight.nvim', config = function()
+        end
+    }
+
 
     -- misc
 
+    use 'vimwiki/vimwiki'
+    use {
+        "folke/todo-comments.nvim",
+        requires = "nvim-lua/plenary.nvim",
+        config = function()
+            require("todo-comments").setup {}
+        end
+    }
     use {
         'dbeniamine/cheat.sh-vim',
         config = function()
@@ -111,7 +124,6 @@ return require('packer').startup(
         end,
         disable = true
     }
-    use 'vimwiki/vimwiki'
     use 'tpope/vim-dispatch'
     use {
         "kyazdani42/nvim-tree.lua",

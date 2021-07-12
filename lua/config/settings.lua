@@ -48,9 +48,13 @@ vim.api.nvim_command([[
 ]])
 
 vim.g.sonokai_style = 'atlantis'
+
+vim.g.tokyonight_style = "storm"
+vim.g.tokyonight_transparent = true
+
 cmd([[
     try
-        colorscheme sonokai 
+        colorscheme tokyonight 
     catch
     endtry
 ]])

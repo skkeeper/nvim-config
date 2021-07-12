@@ -1,5 +1,4 @@
-let g:lightline = {}
-let g:lightline.colorscheme = 'sonokai'
+let g:lightline = {'colorscheme': 'tokyonight'}
 set showtabline=2
 let g:lightline#bufferline#enable_devicons=1
 let g:lightline#bufferline#enable_nerdfont=1
