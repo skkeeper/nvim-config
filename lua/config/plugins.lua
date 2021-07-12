@@ -108,7 +108,7 @@ return require('packer').startup(function()
         "folke/trouble.nvim",
         requires = "kyazdani42/nvim-web-devicons",
         config = function()
-            require("trouble").setup {}
+            require("config/trouble").config()
         end
     }
     use {
@@ -155,7 +155,7 @@ return require('packer').startup(function()
         "folke/todo-comments.nvim",
         requires = "nvim-lua/plenary.nvim",
         config = function()
-            require("todo-comments").setup {}
+            require("config/todo-comments").config()
         end
     }
     use {
