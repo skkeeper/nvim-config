@@ -1,4 +1,5 @@
 local map = require("config/utils").map
+local trouble = require("trouble.providers.telescope")
 
 local M = {}
 
@@ -21,7 +22,11 @@ M.config = function()
                 i = {
                     ["<C-x>"] = false,
                     ["<C-q>"] = actions.send_to_qflist,
+                    ["<C-t>"] = trouble.open_with_trouble
                 },
+                n = {
+                    ["<C-t>"] = trouble.open_with_trouble
+                }
             }
         },
         extensions = {

@@ -39,17 +39,17 @@ M.config = function()
 
    which_key_map.p = {
       name = "which_key_ignore",
-      ps = "Project Search",
-      pe = "Project Explore",
-      pb = "Git branches (telescope)",
-      pc = "Git commits (telescope)",
-      pf = "Buffer Git commits (telescope)",
-      ph = "Git status (telescope)"
+      s = "Project Search",
+      e = "Project Explore",
+      b = "Git branches (telescope)",
+      c = "Git commits (telescope)",
+      f = "Buffer Git commits (telescope)",
+      h = "Git status (telescope)"
    }
 
    which_key_map.d = {
       name = "which_key_ignore",
-      ds = "Search Dot Files"
+      s = "Search Dot Files"
    }
 
    wk.register_keymap("leader", which_key_map)
@@ -59,13 +59,9 @@ M.config = function()
    which_localkey_map.s = "Sneak"
    which_localkey_map.S = "Sneak backwards"
    which_localkey_map["#"] = "Symbols"
-   which_localkey_map.a = "Code action selection"
    which_localkey_map.ac = "Code action"
-   which_localkey_map.acp = "Code action on paragraph"
    which_localkey_map.b = "Git blame"
    which_localkey_map.d = "Git diff split"
-   which_localkey_map.g = "Git diagnostics"
-   which_localkey_map.o = "Outline"
    which_localkey_map.c = {
       name = "Location List",
       c = "Close",

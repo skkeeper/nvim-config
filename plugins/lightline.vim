@@ -1,11 +1,10 @@
-let g:lightline = {'colorscheme': 'tokyonight'}
 set showtabline=2
 let g:lightline#bufferline#enable_devicons=1
 let g:lightline#bufferline#enable_nerdfont=1
 let g:lightline#bufferline#clickable=1
 
 let g:lightline = {
-      \ 'colorscheme': 'dracula',
+      \ 'colorscheme': 'tokyonight',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
       \   'right': [

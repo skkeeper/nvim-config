@@ -73,12 +73,50 @@ return require('packer').startup(
     use {'sindrets/diffview.nvim', disable = true}
 
     -- language features
-    use {'neoclide/coc.nvim', branch='release'}
-    use 'sheerun/vim-polyglot'
+    -- use {'neoclide/coc.nvim', branch='release'}
+    use {
+        'neovim/nvim-lspconfig',
+        config = function()
+            require("config/lspconfig").config()
+        end
+    }
+    use {
+        'glepnir/lspsaga.nvim',
+        config = function()
+            require("config/lspsaga").config()
+        end
+    }
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate',
+        config = function()
+            require('config/nvim-treesitter').config()
+        end
+    }
+    use {
+        'nvim-lua/completion-nvim',
+        config = function()
+            require('config/completion-nvim').config()
+        end
+    }
+    -- use 'sheerun/vim-polyglot'
     use 'alvan/vim-closetag'
     use 'Valloric/MatchTagAlways'
-    use 'andreshazard/vim-freemarker' -- ftl syntax support
+    -- use 'andreshazard/vim-freemarker' -- ftl syntax support
 
+    use {
+        "folke/trouble.nvim",
+        requires = "kyazdani42/nvim-web-devicons",
+        config = function()
+            require("trouble").setup {}
+        end
+    }
+    use {
+        'simrat39/symbols-outline.nvim',
+        config = function()
+            require("config/symbols-outline").config()
+        end
+    }
     -- web
     use {'prettier/vim-prettier', run= 'npm install' }
     use {
@@ -96,19 +134,15 @@ return require('packer').startup(
     use 'itchyny/lightline.vim'
     use 'albertomontesg/lightline-asyncrun'
     use 'mengelbrecht/lightline-bufferline'
-    use 'josa42/vim-lightline-coc'
+    -- use 'josa42/vim-lightline-coc'
 
     -- colorschemes
-    use {'dracula/vim', as= 'dracula' }
-    use 'sainnhe/sonokai'
-    use {
-        'folke/tokyonight.nvim', config = function()
-        end
-    }
+    --[[ use {'dracula/vim', as= 'dracula' }
+    use 'sainnhe/sonokai' ]]
+    use 'folke/tokyonight.nvim'    
 
 
     -- misc
-
     use 'vimwiki/vimwiki'
     use {
         "folke/todo-comments.nvim",
