@@ -75,7 +75,10 @@ return require('packer').startup(function()
         'neovim/nvim-lspconfig',
         config = function()
             require("config/lspconfig").config()
-        end
+        end,
+        requires = {
+            { 'nvim-lua/lsp-status.nvim', opt = true },
+        }
     }
     use {
         'glepnir/lspsaga.nvim',
@@ -127,11 +130,21 @@ return require('packer').startup(function()
     }
     use 'vim-test/vim-test'
 
-    -- lightline
-    use 'itchyny/lightline.vim'
-    use 'albertomontesg/lightline-asyncrun'
-    use 'mengelbrecht/lightline-bufferline'
-    -- use 'josa42/vim-lightline-coc'
+    use {
+        'glepnir/galaxyline.nvim',
+        branch = 'main',
+        config = function() 
+            require('config/galaxyline')
+        end,
+        requires = {'kyazdani42/nvim-web-devicons', opt = true}
+    }
+    use {
+        'akinsho/nvim-bufferline.lua', 
+        requires = 'kyazdani42/nvim-web-devicons',
+        config = function()
+            require('config/nvim-bufferline').config()
+        end
+    }
 
     -- colorschemes
     use 'folke/tokyonight.nvim'    

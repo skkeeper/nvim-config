@@ -22,8 +22,8 @@ map("v", "<A-j>", ":m '>+1<CR>gv=gv")
 map("v", "<A-k>", ":m '<-2<CR>gv=gv")
 
 -- buffers
-map("n", "<leader>j", ":bnext<CR>")
-map("n", "<leader>k", ":bprevious<CR>")
+--[[ map("n", "<leader>j", ":bnext<CR>")
+map("n", "<leader>k", ":bprevious<CR>") ]]
 map("n", "<leader>x", ":Bclose<CR>")
 map("n", "<leader>o", ":Bonly<CR>")
 
@@ -51,3 +51,4 @@ require("config/telescope").keybindings()
 require("config/lspsaga").keybindings()
 require("config/symbols-outline").keybindings()
 require("config/compe").keybindings();
+require("config/nvim-bufferline").keybindings()

@@ -4,7 +4,27 @@ local M = {}
 
 M.config = function()
     local nvim_lsp = require('lspconfig')
+    vim.cmd [[packadd lsp-status.nvim]]
+
+    local lsp_status = require 'lsp-status'
+    lsp_status.config {
+        status_symbol = '',
+        indicator_ok = '',
+        diagnostics = false,
+        current_function = false,
+    }
+    lsp_status.register_progress()
+
+    local capabilities = lsp_status.capabilities
+    -- local capabilities = vim.lsp.protocol.make_client_capabilities()
+    capabilities.textDocument.completion.completionItem.snippetSupport = true
+    capabilities.textDocument.completion.completionItem.resolveSupport = {
+        properties = { 'documentation', 'detail', 'additionalTextEdits' },
+    }
+
     local on_attach = function(client, bufnr)
+        lsp_status.on_attach(client)
+
         local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
         -- Mappings.
         local opts = { noremap=true, silent=true }
