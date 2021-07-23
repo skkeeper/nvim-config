@@ -100,7 +100,13 @@ return require('packer').startup(function()
         end
     }
 
-    use 'alvan/vim-closetag'
+    use {
+        'windwp/nvim-autopairs', 
+        after = "nvim-compe",
+        config = function()
+            require('config/nvim-autopairs').config()
+        end
+    }
     use 'Valloric/MatchTagAlways'
     -- use 'andreshazard/vim-freemarker' -- ftl syntax support
 
