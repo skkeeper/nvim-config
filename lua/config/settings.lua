@@ -35,6 +35,8 @@ opt.wildignore = {
     "*.pyc",
 }
 opt.wildcharm = vim.fn.char2nr('<C-z>')
+opt.list = true
+opt.listchars = 'eol:↩'
 
 opt.title = true
 opt.showmode = false
