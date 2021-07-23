@@ -118,7 +118,7 @@ return require('packer').startup(function()
         end
     }
     -- web
-    use { 'prettier/vim-prettier', run = 'npm install' }
+    -- use { 'prettier/vim-prettier', run = 'npm install' }
     use {
         "norcalli/nvim-colorizer.lua",
         event = "BufRead",
