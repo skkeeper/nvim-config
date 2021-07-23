@@ -21,6 +21,10 @@ map("i", "<A-k>", "<Esc>:m .-2<CR>==gi")
 map("v", "<A-j>", ":m '>+1<CR>gv=gv")
 map("v", "<A-k>", ":m '<-2<CR>gv=gv")
 
+-- Align blocks of text and keep them selected
+map("v", "<", "<gv")
+map("v", ">", ">gv")
+
 -- buffers
 --[[ map("n", "<leader>j", ":bnext<CR>")
 map("n", "<leader>k", ":bprevious<CR>") ]]
