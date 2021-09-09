@@ -156,7 +156,6 @@ return require('packer').startup(function()
     use 'folke/tokyonight.nvim'    
 
     -- misc
-    use 'vimwiki/vimwiki'
     use {
         "folke/todo-comments.nvim",
         requires = "nvim-lua/plenary.nvim",
@@ -180,6 +179,7 @@ return require('packer').startup(function()
         end
     }
     use 'bayne/vim-dot-http'
+    use 'alexpearce/nvim-follow-markdown-links'
 
     end,
 {

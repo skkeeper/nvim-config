@@ -47,6 +47,9 @@ map("n", "<localleader>cn", ":lnext<CR>")
 map("n", "<localleader>cp", ":lprevious<CR>")
 map("n", "<localleader>cc", ":lclose<CR>")
 
+-- obsidian notes
+map("n", "<leader>ww", ":e $HOME/notes/Morphotech/Journal.md<CR>")
+
 
 -- plugins
 require("config/fugitive").keybindings()

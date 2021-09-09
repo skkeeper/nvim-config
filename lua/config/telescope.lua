@@ -45,6 +45,13 @@ M.search_dotfiles = function()
     })
 end
 
+M.search_notes = function() 
+    require("telescope.builtin").find_files({
+        prompt_title = "< Obsidian >",
+        cwd = "$HOME/.notes",
+    })
+end
+
 M.keybindings = function()
     map("n", "<C-p>",[[<Cmd> Telescope git_files<CR>]])
     map("n", "<leader>ps",[[<Cmd> Telescope live_grep<CR>]])
@@ -59,6 +66,7 @@ M.keybindings = function()
     map("n", "<leader>ph",[[<Cmd> Telescope git_status<CR>]])
 
     map("n", "<leader>ds",[[<Cmd>lua require('config.telescope').search_dotfiles()<CR>]])
+    map("n", "<leader>ds",[[<Cmd>lua require('config.telescope').search_notes()<CR>]])
 end
 
 return M
