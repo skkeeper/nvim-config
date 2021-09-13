@@ -22,18 +22,9 @@ git clone https://github.com/skkeeper/nvim-config.git %APPDATA%/../Local/nvim
 pip install neovim
 ```
 
-- Install vim-plug
-
-Linux
+- Install javascript language servers
 ```bash
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
-
-Windows (Powershell prompt)
-```powershell 
-iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
-    ni "$env:LOCALAPPDATA/nvim-data/site/autoload/plug.vim" -Force
+npm install -g typescript-language-server diagnostic-languageserver eslint
 ```
 
 - Install ripgrep, fd and ag

@@ -104,11 +104,11 @@ M.config = function()
         init_options = {
             linters = {
                 eslint = {
-                    command = 'eslint_d',
+                    command = 'eslint',
                     rootPatterns = { '.git' },
                     debounce = 100,
                     args = { '--stdin', '--stdin-filename', '%filepath', '--format', 'json' },
-                    sourceName = 'eslint_d',
+                    sourceName = 'eslint',
                     parseJson = {
                         errorsRoot = '[0].messages',
                         line = 'line',
@@ -131,8 +131,8 @@ M.config = function()
                 typescriptreact = 'eslint',
             },
             formatters = {
-                eslint_d = {
-                    command = 'eslint_d',
+                eslint = {
+                    command = 'eslint',
                     args = { '--stdin', '--stdin-filename', '%filename', '--fix-to-stdout' },
                     rootPatterns = { '.git' },
                 },
@@ -143,13 +143,13 @@ M.config = function()
             },
             formatFiletypes = {
                 css = 'prettier',
-                javascript = 'eslint_d',
-                javascriptreact = 'eslint_d',
+                javascript = 'eslint',
+                javascriptreact = 'eslint',
                 json = 'prettier',
                 scss = 'prettier',
                 less = 'prettier',
-                typescript = 'eslint_d',
-                typescriptreact = 'eslint_d',
+                typescript = 'eslint',
+                typescriptreact = 'eslint',
                 json = 'prettier',
                 markdown = 'prettier',
             }
