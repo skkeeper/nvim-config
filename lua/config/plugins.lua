@@ -81,6 +81,24 @@ return require('packer').startup(function()
         }
     }
     use {
+        "hrsh7th/nvim-cmp",
+        requires = {
+            "windwp/nvim-autopairs", "onsails/lspkind-nvim", 
+            "hrsh7th/cmp-buffer", "hrsh7th/cmp-nvim-lsp",
+            'quangnguyen30192/cmp-nvim-ultisnips', 'hrsh7th/cmp-nvim-lua',
+            'octaltree/cmp-look', 'hrsh7th/cmp-path', 'hrsh7th/cmp-calc',
+            'f3fora/cmp-spell', 'hrsh7th/cmp-emoji'
+        },
+        config = function()
+            require("config/cmp").config()
+        end
+    }
+    use {
+        'tzachar/cmp-tabnine',
+        run = './install.sh',
+        requires = 'hrsh7th/nvim-cmp'
+    }
+    use {
         'glepnir/lspsaga.nvim',
         config = function()
             require("config/lspsaga").config()
@@ -91,20 +109,6 @@ return require('packer').startup(function()
         run = ':TSUpdate',
         config = function()
             require('config/nvim-treesitter').config()
-        end
-    }
-    use {
-        'hrsh7th/nvim-compe',
-        config = function()
-            require('config/compe').config()        
-        end
-    }
-
-    use {
-        'windwp/nvim-autopairs', 
-        after = "nvim-compe",
-        config = function()
-            require('config/nvim-autopairs').config()
         end
     }
     use 'Valloric/MatchTagAlways'
@@ -124,7 +128,6 @@ return require('packer').startup(function()
         end
     }
     -- web
-    -- use { 'prettier/vim-prettier', run = 'npm install' }
     use {
         "norcalli/nvim-colorizer.lua",
         event = "BufRead",

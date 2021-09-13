@@ -57,5 +57,4 @@ require("config/nvim-tree").keybindings()
 require("config/telescope").keybindings()
 require("config/lspsaga").keybindings()
 require("config/symbols-outline").keybindings()
-require("config/compe").keybindings();
 require("config/nvim-bufferline").keybindings()
