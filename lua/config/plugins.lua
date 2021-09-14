@@ -81,9 +81,15 @@ return require('packer').startup(function()
         }
     }
     use {
+        "windwp/nvim-autopairs",
+        config = function()
+            require("config/autopairs").config()
+        end
+    }
+    use {
         "hrsh7th/nvim-cmp",
         requires = {
-            "windwp/nvim-autopairs", "onsails/lspkind-nvim", 
+            "onsails/lspkind-nvim", 
             "hrsh7th/cmp-buffer", "hrsh7th/cmp-nvim-lsp",
             'quangnguyen30192/cmp-nvim-ultisnips', 'hrsh7th/cmp-nvim-lua',
             'octaltree/cmp-look', 'hrsh7th/cmp-path', 'hrsh7th/cmp-calc',

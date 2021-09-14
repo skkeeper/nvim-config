@@ -81,11 +81,11 @@ M.config = function()
     }
 
     -- Autopairs
-    --[[ require("nvim-autopairs.completion.cmp").setup({
+    require("nvim-autopairs.completion.cmp").setup({
         map_cr = true,
         map_complete = true,
         auto_select = true
-    }) ]]
+    })
 
     -- TabNine
     local tabnine = require('cmp_tabnine.config')
