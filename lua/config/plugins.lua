@@ -33,10 +33,9 @@ return require('packer').startup(function()
     }
     use 'unblevable/quick-scope'
     use {
-        'AckslD/nvim-whichkey-setup.lua',
-        requires = {'liuchengxu/vim-which-key', config='require("plugin_settings.whichkey")'},
+       "folke/which-key.nvim",
         config = function()
-            require("config/vim-which-key").config()
+            require("config/which-key").config()
         end
     }
     use 'wellle/targets.vim'
@@ -96,6 +95,19 @@ return require('packer').startup(function()
         "windwp/nvim-autopairs",
         config = function()
             require("config/autopairs").config()
+        end
+    }
+use {
+        "hrsh7th/nvim-cmp",
+        requires = {
+            "onsails/lspkind-nvim", 
+            "hrsh7th/cmp-buffer", "hrsh7th/cmp-nvim-lsp",
+            'quangnguyen30192/cmp-nvim-ultisnips', 'hrsh7th/cmp-nvim-lua',
+            'octaltree/cmp-look', 'hrsh7th/cmp-path', 'hrsh7th/cmp-calc',
+            'f3fora/cmp-spell', 'hrsh7th/cmp-emoji'
+        },
+        config = function()
+            require("config/cmp").config()
         end
     }
     use {
