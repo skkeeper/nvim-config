@@ -25,7 +25,7 @@ pip install neovim
 - Install javascript language servers
 
 ```bash
-npm install -g typescript-language-server diagnostic-languageserver eslint
+npm install -g eslint
 ```
 
 - Install ripgrep, fd and ag
