@@ -87,6 +87,12 @@ return require('packer').startup(function()
         }
     }
     use {
+        'kabouzeid/nvim-lspinstall',
+        config = function()
+            require("config/lspinstall").config()
+        end
+    }
+    use {
         "windwp/nvim-autopairs",
         config = function()
             require("config/autopairs").config()
