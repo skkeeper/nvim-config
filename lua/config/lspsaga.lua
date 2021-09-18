@@ -21,7 +21,7 @@ M.keybindings = function()
     map("n", "<localleader>ac", "<cmd>lua require('lspsaga.codeaction').code_action()<CR>")
     map("v", "<localleader>ac", ":<C-U>lua require('lspsaga.codeaction').range_code_action()<CR>")
     map("n", "<f2>", "<cmd>lua require('lspsaga.rename').rename()<CR>")
-    map("n", "<localleader>gd", "<cmd>lua require'lspsaga.provider'.preview_definition()<CR>")
+    map("n", "<localleader>ap", "<cmd>lua require'lspsaga.provider'.preview_definition()<CR>")
 end
 
 return M

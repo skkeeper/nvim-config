@@ -23,6 +23,7 @@ pip install neovim
 ```
 
 - Install javascript language servers
+
 ```bash
 npm install -g typescript-language-server diagnostic-languageserver eslint
 ```
@@ -30,18 +31,32 @@ npm install -g typescript-language-server diagnostic-languageserver eslint
 - Install ripgrep, fd and ag
 
 Windows (chocolatey)
+
 ```bash
 cinst ripgrep fd ag
 ```
 
 Linux
+
 ```bash
 sudo apt-get install ripgrep fd-find silversearcher-ag ripgrep
 ```
 
+## Language servers
 
+Inside nvim run the following:
 
-Based on: 
+```bash
+:LspInstall lua
+:LspInstall vim
+:LspInstall diagnosticls
+:LspInstall typescript
+:LspInstall java
+:LspInstall css
+:LspInstall html
+```
+
+## References:
+
 - https://gist.github.com/benawad/b768f5a5bbd92c8baabd363b7e79786f
 - https://github.com/erkrnt/awesome-streamerrc/blob/master/ThePrimeagen/.vimrc
-
