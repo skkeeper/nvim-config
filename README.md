@@ -22,38 +22,16 @@ git clone https://github.com/skkeeper/nvim-config.git %APPDATA%/../Local/nvim
 pip install neovim
 ```
 
-- Install javascript language servers
+- Install dependencies for LSP servers
 
 ```bash
-npm install -g eslint
+npm install -g eslint markdownlint-cli stylelint write-good yarn
 ```
 
-- Install ripgrep, fd and ag
-
-Windows (chocolatey)
+- Install LSP servers, run the following inside Neovim
 
 ```bash
-cinst ripgrep fd ag
-```
-
-Linux
-
-```bash
-sudo apt-get install ripgrep fd-find silversearcher-ag ripgrep
-```
-
-## Language servers
-
-Inside nvim run the following:
-
-```bash
-:LspInstall lua
-:LspInstall vim
-:LspInstall diagnosticls
-:LspInstall typescript
-:LspInstall java
-:LspInstall css
-:LspInstall html
+:lua require("config/lspinstall").bootstrap()
 ```
 
 ## References:
