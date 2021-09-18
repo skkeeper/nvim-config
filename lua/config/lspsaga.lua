@@ -15,7 +15,7 @@ end
 
 M.keybindings = function()
     map("n", "K", ":Lspsaga hover_doc<CR>")
-    map("i", "<C-k>", "<Cmd>Lspsaga signature_help<CR>")
+    map("n", "<C-k>", "<Cmd>Lspsaga signature_help<CR>")
     map("n", "gh", "<Cmd>Lspsaga lsp_finder<CR>")
 
     map("n", "<localleader>ac", "<cmd>lua require('lspsaga.codeaction').code_action()<CR>")
