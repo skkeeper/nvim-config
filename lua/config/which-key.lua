@@ -58,7 +58,8 @@ M.config = function()
           d = "Definitions",
           s = "Symbols",
           w = "Workspace Symbols",
-          p = "Peek definition"
+          p = "Peek definition",
+          g = "Show diagnostics"
       },
       b = "Git blame",
       d = "Git diff split",
