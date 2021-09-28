@@ -26,6 +26,7 @@ opt.spell = false
 --opt.spellfile="spell/pt-preao.utf-8.add"
 opt.spelllang = "en_us"
 opt.scrolloff = 8
+opt.relativenumber = true
 opt.tabstop = 2
 opt.wildignore = {
     "node_modules/**",
