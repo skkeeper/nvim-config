@@ -60,6 +60,27 @@ return require('packer').startup(function()
         end
     }
 
+    use {
+        'xiyaowong/telescope-emoji.nvim',
+        requires = {
+            'nvim-telescope/telescope.nvim'
+        },
+        config = function()
+            require("telescope").load_extension("emoji")
+        end
+    }
+
+    use {
+        "AckslD/nvim-neoclip.lua",
+        requires = {
+            'nvim-telescope/telescope.nvim'
+        },
+        config = function()
+            require('neoclip').setup()
+            require('telescope').load_extension('neoclip')
+        end,
+    }
+
     -- git
     use 'tpope/vim-fugitive'
     use 'idanarye/vim-merginal'
