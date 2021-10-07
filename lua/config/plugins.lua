@@ -31,7 +31,6 @@ return require('packer').startup(function()
           require("config/hop").config()
       end
     }
-    use 'unblevable/quick-scope'
     use {
        "folke/which-key.nvim",
         config = function()
