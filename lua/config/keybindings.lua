@@ -12,7 +12,6 @@ map("n", ",f", ":find **/*<C-z><S-Tab>")
 map("n", "<leader>e", ":Explore<CR>")
 map("n", "<leader>pe", ":Explore .<CR>")
 
-
 -- move lines
 map("n", "<A-j>", ":m .+1<CR>==")
 map("n", "<A-k>", ":m .-2<CR>==")
