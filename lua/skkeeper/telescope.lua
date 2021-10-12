@@ -22,7 +22,19 @@ local get_files_previous_commit = function()
 end
 
 local get_files_since_fork = function(branch)
-    return vim.fn.systemlist('git log ' .. branch .. '.. --pretty=format: --name-only')
+    local pattern = "^commit: ";
+    local output = tableUtils.removeDuplicates(vim.fn.systemlist('git log ' .. branch .. '.. --pretty=format:"commit: %h %ar" --name-only'))
+    local results = {}
+
+    local commit = '';
+    for k, v in pairs(output) do
+        if v:find(pattern) ~= nil then
+            commit = v
+        else
+            table.insert(results, { filename = v, commit = commit:gsub(pattern, "")  })
+        end
+    end
+    return results
 end
 
 M.last_commit_telescope = function()
@@ -41,7 +53,16 @@ M.fork_to_telescope = function(branch)
     
     pickers.new(opts, {
         prompt_title = "Changes since fork",
-        finder = finders.new_table { results = results },
+        finder = finders.new_table { 
+            results = results,
+            entry_maker = function(entry)
+              return {
+                  value = entry.filename,
+                  display = entry.filename .. " " .. entry.commit,
+                  ordinal = entry.filename,
+              }
+            end
+        },
         sorter = conf.generic_sorter(opts),
         previewer = conf.file_previewer({})
   }):find()
@@ -55,7 +76,7 @@ end
 M.fork_to_quickfix = function(branch)
     branch = branch or "develop"
     local results = get_files_since_fork(branch)
-    send_to_quickfix(tableUtils.removeDuplicates(results))
+    send_to_quickfix(tableUtils.map(results, function(item) return item.filename end))
 end
 
 M.eslint_rules_to_telescope = function()
