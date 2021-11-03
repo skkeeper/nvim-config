@@ -139,6 +139,8 @@ vim.cmd([[
     command! EslintRulesDisableNextLine lua require("skkeeper/telescope").eslint_rules_to_telescope() 
 ]])
 
--- TODO: Add git conflicts telescope/quickfix
+vim.cmd([[
+    command! GitConflicts cex(system("git diff --check"))
+]])
 
 return M
