@@ -81,11 +81,8 @@ M.config = function()
     }
 
     -- Autopairs
-    require("nvim-autopairs.completion.cmp").setup({
-        map_cr = true,
-        map_complete = true,
-        auto_select = true
-    })
+    local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+    cmp.event:on( 'confirm_done', cmp_autopairs.on_confirm_done({  map_char = { tex = '' } }))
 
     -- TabNine
     local tabnine = require('cmp_tabnine.config')

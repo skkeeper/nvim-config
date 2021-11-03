@@ -1,11 +1,11 @@
 local map = require("config/utils").map
-local trouble = require("trouble.providers.telescope")
 
 local M = {}
 
-local actions = require('telescope.actions')
-require('telescope').load_extension('fzy_native')
 M.config = function()
+    local actions = require('telescope.actions')
+    require('telescope').load_extension('fzy_native')
+    local trouble = require("trouble.providers.telescope")
     require('telescope').setup {
         defaults = {
             file_sorter = require('telescope.sorters').get_fzy_sorter,

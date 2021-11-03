@@ -1,11 +1,10 @@
-local saga = require 'lspsaga'
 local map = require("config/utils").map
-local lsp = vim.lsp
-local handlers = lsp.handlers
-
 local M = {}
 
 M.config = function()
+    local saga = require 'lspsaga'
+    local lsp = vim.lsp
+    local handlers = lsp.handlers
     saga.init_lsp_saga {
         error_sign = '',
         warn_sign = '',

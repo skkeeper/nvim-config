@@ -1,8 +1,7 @@
-local protocol = require 'vim.lsp.protocol'
-
 local M = {}
 
 M.config = function()
+    local protocol = require 'vim.lsp.protocol'
     local nvim_lsp = require('lspconfig')
     vim.cmd [[packadd lsp-status.nvim]]
 
@@ -76,8 +75,7 @@ M.config = function()
     nvim_lsp.tsserver.setup {
         on_attach = on_attach,
         handlers = {
-            ["textDocument/publishDiagnostics"] = function(_, _, params,
-                                                           client_id, _, config)
+            ["textDocument/publishDiagnostics"] = function(_, params, ctx, config)
                 if params.diagnostics ~= nil then
                     local idx = 1
                     while idx <= #params.diagnostics do
@@ -89,8 +87,8 @@ M.config = function()
                         end
                     end
                 end
-                vim.lsp.diagnostic.on_publish_diagnostics(_, _, params,
-                                                          client_id, _, config)
+                vim.lsp.diagnostic.on_publish_diagnostics(_, params,
+                                                          ctx, config)
             end
         }
     }

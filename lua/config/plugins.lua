@@ -114,7 +114,7 @@ return require('packer').startup(function()
     use {
         "windwp/nvim-autopairs",
         config = function()
-            require("config/autopairs").config()
+            require("config/nvim-autopairs").config()
         end
     }
     use {
@@ -136,7 +136,7 @@ return require('packer').startup(function()
         requires = 'hrsh7th/nvim-cmp'
     }
     use {
-        'glepnir/lspsaga.nvim',
+        'tami5/lspsaga.nvim',
         config = function()
             require("config/lspsaga").config()
         end
