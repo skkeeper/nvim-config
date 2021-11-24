@@ -190,6 +190,11 @@ return require('packer').startup(function()
         end
     }
 
+    use {
+        'kkoomen/vim-doge',
+        run = ':call doge#install()'
+    }
+
     -- colorschemes
     use 'folke/tokyonight.nvim'    
 
