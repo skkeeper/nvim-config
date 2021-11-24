@@ -131,11 +131,6 @@ return require('packer').startup(function()
         end
     }
     use {
-        'tzachar/cmp-tabnine',
-        run = './install.sh',
-        requires = 'hrsh7th/nvim-cmp'
-    }
-    use {
         'tami5/lspsaga.nvim',
         config = function()
             require("config/lspsaga").config()
