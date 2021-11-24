@@ -131,6 +131,9 @@ return require('packer').startup(function()
         end
     }
     use {
+        'jose-elias-alvarez/nvim-lsp-ts-utils'
+    }
+    use {
         'tami5/lspsaga.nvim',
         config = function()
             require("config/lspsaga").config()
