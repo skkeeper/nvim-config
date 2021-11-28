@@ -25,7 +25,7 @@ pip install neovim
 - Install dependencies for LSP servers
 
 ```bash
-npm install -g eslint markdownlint-cli stylelint write-good yarn
+npm install -g eslint markdownlint-cli stylelint write-good yarn vscode-langservers-extracted
 ```
 
 - Install LSP servers, run the following inside Neovim
