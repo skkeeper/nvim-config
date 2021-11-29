@@ -42,6 +42,8 @@ opt.listchars = 'eol:↩'
 opt.title = true
 opt.showmode = false
 
+vim.o.updatetime = 250
+
 opt.syntax = "enable"
 if vim.fn.has("termguicolors") == 1 then
     opt.termguicolors = true
